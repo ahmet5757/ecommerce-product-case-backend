@@ -4,6 +4,8 @@ const axios = require("axios");
 require("dotenv").config();
 
 const app = express();
+
+
 const PORT = process.env.PORT || 3001;
 
 app.use(cors());
@@ -43,6 +45,8 @@ app.get("/products", async (req, res) => {
   res.json(result);
 });
 
+
 app.listen(PORT, () => {
   console.log(`Backend çalışıyor → http://localhost:${PORT}`);
+  console.log(`process.env.PORT: ${process.env.PORT}`);
 });
